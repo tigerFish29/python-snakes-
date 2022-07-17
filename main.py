@@ -60,7 +60,23 @@ def next_turn(snake, turn):
 
 
 def change_direction(new_direction):
-    pass
+    global direction
+
+    if new_direction == 'left':
+        if direction != 'right':
+            direction = new_direction
+
+    elif new_direction == 'right':
+        if direction != 'left':
+            direction = new_direction
+
+    elif new_direction == 'up':
+        if direction != 'down':
+            direction = new_direction
+
+    elif new_direction == 'down':
+        if direction != 'up':
+            direction = new_direction
 
 
 def check_collisions():
